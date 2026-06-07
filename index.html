@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Saunav Kaushik | Data Science Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -15,126 +15,194 @@
     <span class="nav-logo">SK</span>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <a href="YOUR_GOOGLE_DRIVE_RESUME_LINK" target="_blank" class="btn btn-nav">Download CV</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-text">
-      <p class="hero-tag">Data Science Portfolio</p>
-      <h1>Saunav<br>Kaushik</h1>
-      <p class="hero-sub">MBA in Data Science & AI &mdash; turning raw data into clear decisions.</p>
-      <a href="#projects" class="btn">View Projects</a>
+    <div class="hero-inner">
+      <p class="hero-tag">Data Science &amp; Analytics</p>
+      <h1>Saunav<br><span>Kaushik</span></h1>
+      <p class="hero-sub">MBA in Data Science &amp; AI — transforming data into decisions that matter.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
     </div>
-    <div class="hero-accent"></div>
+    <div class="hero-graphic">
+      <div class="graphic-ring r1"></div>
+      <div class="graphic-ring r2"></div>
+      <div class="graphic-ring r3"></div>
+      <div class="graphic-dot"></div>
+    </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about" class="section">
-    <div class="section-label">01 / About</div>
-    <div class="about-grid">
-      <div class="about-main">
-        <h2>Hi, I'm Saunav</h2>
-        <p>
-          I am a passionate Data Science professional currently pursuing an MBA in Data Science & AI.
-          Through this portfolio I showcase the projects I have built using analytics and visualisation
-          tools to extract meaningful insights from data.
-        </p>
-        <p>
-          <!-- Add more about yourself here -->
-          I enjoy working at the intersection of business strategy and data — finding the story the
-          numbers are trying to tell.
-        </p>
+    <div class="container">
+      <div class="section-label">About Me</div>
+      <div class="about-grid">
+        <div>
+          <h2>Passionate about<br>the story in data</h2>
+          <p>I am pursuing an MBA in Data Science &amp; AI, building expertise in analytics and visualisation tools to extract meaningful business insights from complex datasets.</p>
+          <p>I enjoy working at the intersection of business strategy and data — finding the patterns, trends, and stories that drive better decisions.</p>
+        </div>
+        <div class="stat-stack">
+          <div class="stat-card">
+            <span class="stat-num">2</span>
+            <span class="stat-desc">Projects Completed / In Progress</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">MBA</span>
+            <span class="stat-desc">Data Science &amp; AI</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">2+</span>
+            <span class="stat-desc">BI Tools Mastered</span>
+          </div>
+        </div>
       </div>
-      <div class="about-side">
-        <div class="fact-card">
-          <span class="fact-num">2+</span>
-          <span class="fact-label">Projects Completed</span>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section section-dark">
+    <div class="container">
+      <div class="section-label light">Education</div>
+      <h2 class="light">Academic Background</h2>
+      <div class="edu-timeline">
+
+        <div class="edu-card">
+          <div class="edu-year">20XX – Present</div>
+          <div class="edu-body">
+            <h3>MBA — Data Science &amp; AI</h3>
+            <p class="edu-inst"><!-- Your University Name --></p>
+            <p class="edu-detail"><!-- Add relevant coursework, GPA, or a one-liner about the program --></p>
+          </div>
         </div>
-        <div class="fact-card">
-          <span class="fact-num">MBA</span>
-          <span class="fact-label">Data Science & AI</span>
+
+        <div class="edu-card">
+          <div class="edu-year">20XX – 20XX</div>
+          <div class="edu-body">
+            <h3><!-- Your Undergraduate Degree --></h3>
+            <p class="edu-inst"><!-- Your University Name --></p>
+            <p class="edu-detail"><!-- Grade / specialisation --></p>
+          </div>
         </div>
+
+        <!-- Add more education blocks if needed -->
+
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section section-alt">
-    <div class="section-label">02 / Skills</div>
-    <h2>Tools &amp; Technologies</h2>
-    <div class="skills-grid">
-      <div class="skill-pill">Tableau</div>
-      <div class="skill-pill">Power BI</div>
-      <div class="skill-pill">Python</div>
-      <div class="skill-pill">SQL</div>
-      <div class="skill-pill">Excel</div>
-      <div class="skill-pill">Data Visualisation</div>
-      <div class="skill-pill">Exploratory Analysis</div>
-      <div class="skill-pill">Storytelling with Data</div>
-      <!-- Add or remove skills freely -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-label">Skills</div>
+      <h2>Tools &amp; Technologies</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>Visualisation</h4>
+          <div class="pills">
+            <span class="pill">Tableau</span>
+            <span class="pill">Power BI</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Data &amp; Analysis</h4>
+          <div class="pills">
+            <span class="pill">SQL</span>
+            <span class="pill">Python</span>
+            <span class="pill">Excel</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Competencies</h4>
+          <div class="pills">
+            <span class="pill">Exploratory Analysis</span>
+            <span class="pill">Data Storytelling</span>
+            <span class="pill">Dashboard Design</span>
+            <span class="pill">Business Intelligence</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="section-label">03 / Projects</div>
-    <h2>Featured Work</h2>
-    <div class="projects-grid">
+  <section id="projects" class="section section-mid">
+    <div class="container">
+      <div class="section-label">Projects</div>
+      <h2>Featured Work</h2>
+      <div class="projects-grid">
 
-      <!-- PROJECT 1 — Tableau (complete) -->
-      <div class="project-card">
-        <div class="project-tool">Tableau</div>
-        <h3>Project Title Here</h3>
-        <p>
-          <!-- Describe what you analysed, what insight you found, and what decision it could support -->
-          Replace this with a 2–3 sentence description of your Tableau project: the dataset,
-          the question you answered, and the key finding.
-        </p>
-        <div class="project-links">
-          <a href="#" class="btn btn-sm">View Dashboard →</a>
-          <!-- Optional: <a href="#" class="btn btn-sm btn-outline">GitHub →</a> -->
+        <!-- PROJECT 1 — Tableau -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="tool-badge">Tableau</span>
+            <span class="status-badge done">Completed</span>
+          </div>
+          <h3>Project Title Here</h3>
+          <p>Replace this with 2–3 sentences: the dataset you used, the business question you answered, and the key insight or finding from your Tableau dashboard.</p>
+          <ul class="project-tags">
+            <li>Data Visualisation</li>
+            <li>Dashboard</li>
+            <!-- Add relevant tags -->
+          </ul>
+          <div class="project-footer">
+            <a href="#" class="btn btn-sm">View Dashboard →</a>
+          </div>
         </div>
-        <div class="project-status done">Completed</div>
-      </div>
 
-      <!-- PROJECT 2 — Power BI (in progress) -->
-      <div class="project-card project-wip">
-        <div class="project-tool">Power BI</div>
-        <h3>Project Title Here</h3>
-        <p>
-          <!-- Brief description of what this project will cover -->
-          This project is currently in progress. Replace with a short description of the
-          dataset and the business question you are exploring.
-        </p>
-        <div class="project-links">
-          <span class="btn btn-sm btn-disabled">Coming Soon</span>
+        <!-- PROJECT 2 — Power BI -->
+        <div class="project-card wip">
+          <div class="project-header">
+            <span class="tool-badge pbi">Power BI</span>
+            <span class="status-badge wip">In Progress</span>
+          </div>
+          <h3>Project Title Here</h3>
+          <p>Brief description of what this Power BI project will cover — the dataset, the business question, and what insights you aim to uncover.</p>
+          <ul class="project-tags">
+            <li>Power BI</li>
+            <li>DAX</li>
+          </ul>
+          <div class="project-footer">
+            <span class="btn btn-sm btn-disabled">Coming Soon</span>
+          </div>
         </div>
-        <div class="project-status wip">In Progress</div>
-      </div>
 
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section section-alt">
-    <div class="section-label">04 / Contact</div>
-    <h2>Get In Touch</h2>
-    <p class="contact-sub">Open to opportunities, collaborations, or just a conversation about data.</p>
-    <div class="contact-links">
-      <a href="mailto:your@email.com" class="btn">Email Me</a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn btn-outline">LinkedIn</a>
-      <a href="https://github.com/saunavkaushik" target="_blank" class="btn btn-outline">GitHub</a>
+  <section id="contact" class="section section-dark">
+    <div class="container contact-wrap">
+      <div class="section-label light">Contact</div>
+      <h2 class="light">Let's Connect</h2>
+      <p class="light muted-text">Open to opportunities, collaborations, or conversations about data and analytics.</p>
+      <div class="contact-links">
+        <a href="mailto:your@email.com" class="btn">Email Me</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn btn-ghost">LinkedIn</a>
+        <a href="https://github.com/saunavkaushik" target="_blank" class="btn btn-ghost">GitHub</a>
+        <a href="YOUR_GOOGLE_DRIVE_RESUME_LINK" target="_blank" class="btn btn-ghost">Download CV</a>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 Saunav Kaushik &mdash; Built with GitHub Pages</p>
+    <div class="container footer-inner">
+      <span>© 2026 Saunav Kaushik</span>
+      <span>Built with GitHub Pages</span>
+    </div>
   </footer>
 
 </body>
 </html>
+
