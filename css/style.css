@@ -295,3 +295,7 @@ footer {
   .edu-card { grid-template-columns: 1fr; gap: 0.5rem; }
   .footer-inner { flex-direction: column; gap: 0.5rem; text-align: center; }
 }
+
+#experience {
+  background: #e8edf2;
+}
