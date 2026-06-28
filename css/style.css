@@ -315,3 +315,7 @@ footer {
   object-position: top;
   display: block;
 }
+
+.project-screenshots.single img {
+  height: 200px;
+}
