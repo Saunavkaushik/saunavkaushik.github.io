@@ -320,3 +320,66 @@ footer {
 .project-screenshots.single img {
   height: 200px;
 }
+
+/* ── PROJECT ANALYSIS BULLETS ── */
+.project-analysis {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0.25rem 0 0.5rem;
+}
+.project-analysis li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.84rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.project-analysis li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+/* ── FEATURED PROJECT CARD ── */
+.project-featured {
+  border: 1.5px solid var(--gold);
+  background: linear-gradient(180deg, var(--white) 0%, var(--slate) 100%);
+  position: relative;
+}
+.project-featured::before {
+  content: "Centerpiece";
+  position: absolute;
+  top: -0.65rem;
+  left: 1.5rem;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.7rem;
+  border-radius: 4px;
+}
+
+/* ── PROJECTS FOOTNOTE (link to fun page) ── */
+.projects-footnote {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.projects-footnote a {
+  color: var(--gold);
+  font-weight: 600;
+  border-bottom: 1px solid var(--gold);
+}
+
+/* ── FUN PAGE HERO VARIANT ── */
+.fun-hero .hero-tag { color: var(--gold-lt); }
