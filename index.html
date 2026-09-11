@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,7 @@
 
   <!-- NAV -->
   <nav>
-    <span class="nav-logo">SK</span>
+    <a href="index.html" class="nav-logo">SK</a>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -203,10 +202,12 @@
           <h3>Warehouse &amp; Logistics Cost Optimization</h3>
           <p>Analysed ~50,000 e-commerce orders to isolate the real drivers of late deliveries and evaluate whether freight cost trade-offs justify keeping the worst-performing carrier.</p>
           <ul class="project-analysis">
-            <li>Weather is the strongest driver of on-time delivery (65% in clear conditions vs. 6.5% in snow) — carrier and distance also contribute, while quarter and warehouse ID were tested and ruled out.</li>
+            <li>Weather is the strongest driver of on-time delivery (65% in clear conditions vs. 6.5% in snow) — quarter and warehouse ID were tested and ruled out.</li>
             <li>Freight-to-value ratio is flat (~65%) across every carrier — the worst-performing carrier isn't cheaper, so there's no cost trade-off justifying its use.</li>
-            <li>Warehouse processing hours are flat across carrier, warehouse, and package size, isolating the delay problem to carrier transit rather than internal handling.</li>
           </ul>
+          <div class="project-screenshots single" style="grid-template-columns: 1fr;">
+            <img src="img/warehouse-cover.jpg" alt="Warehouse Logistics Operations Dashboard cover" />
+          </div>
           <ul class="project-tags">
             <li>Power BI</li>
             <li>DAX</li>
@@ -281,11 +282,27 @@
       <div class="section-label light">Contact</div>
       <h2 class="light">Let's Connect</h2>
       <p class="light muted-text">Open to opportunities, collaborations, or conversations about data and analytics.</p>
-      <div class="contact-links">
-        <a href="mailto:ksaunav@email.com" class="btn">Email Me</a>
-        <a href="https://www.linkedin.com/in/saunav-kaushik-29296320b/" target="_blank" class="btn btn-ghost">LinkedIn</a>
-        <a href="https://github.com/saunavkaushik" target="_blank" class="btn btn-ghost">GitHub</a>
-        <a href="https://drive.google.com/file/d/1WptvGumXlsymUgz3zxBfDoVuFLlQmoJk/view?usp=sharing" target="_blank" class="btn btn-ghost">Download CV</a>
+
+      <div class="contact-flex">
+        <div class="contact-links contact-links-vertical">
+          <a href="https://www.linkedin.com/in/saunav-kaushik-29296320b/" target="_blank" class="btn btn-ghost">LinkedIn</a>
+          <a href="https://github.com/saunavkaushik" target="_blank" class="btn btn-ghost">GitHub</a>
+          <a href="https://drive.google.com/file/d/1WptvGumXlsymUgz3zxBfDoVuFLlQmoJk/view?usp=sharing" target="_blank" class="btn btn-ghost">Download CV</a>
+        </div>
+
+        <form id="contact-form" class="contact-form-card" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label for="cf-name">Your Name</label>
+          <input type="text" id="cf-name" name="name" required />
+
+          <label for="cf-email">Your Email</label>
+          <input type="email" id="cf-email" name="_replyto" required />
+
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="4" required></textarea>
+
+          <button type="submit" class="btn contact-submit-btn">Send Message →</button>
+          <p class="contact-form-status" id="contact-form-status"></p>
+        </form>
       </div>
     </div>
   </section>
@@ -295,6 +312,57 @@
       <span>© 2026 Saunav Kaushik</span>
     </div>
   </footer>
+
+  <script>
+    function copyEmail(e) {
+      const btn = e.currentTarget;
+      const email = btn.getAttribute('data-email');
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(email).then(() => {
+          const original = btn.textContent;
+          btn.textContent = 'Copied!';
+          setTimeout(() => { btn.textContent = original; }, 1800);
+        });
+      }
+      // mailto: still fires as default action for anyone with a mail client configured
+    }
+
+    const contactForm = document.getElementById('contact-form');
+    const contactStatus = document.getElementById('contact-form-status');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const submitBtn = contactForm.querySelector('.contact-submit-btn');
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        contactStatus.textContent = '';
+        contactStatus.className = 'contact-form-status';
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: { 'Accept': 'application/json' }
+          });
+          if (response.ok) {
+            contactForm.reset();
+            contactStatus.textContent = "Thanks — I'll get back to you soon.";
+            contactStatus.classList.add('success');
+          } else {
+            contactStatus.textContent = 'Something went wrong. Please try again or email me directly.';
+            contactStatus.classList.add('error');
+          }
+        } catch (err) {
+          contactStatus.textContent = 'Something went wrong. Please try again or email me directly.';
+          contactStatus.classList.add('error');
+        } finally {
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
