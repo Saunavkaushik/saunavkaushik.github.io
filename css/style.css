@@ -257,7 +257,7 @@ h2.light { color: var(--white); }
 .project-card h3 {
   font-family: var(--font-display); font-size: 1.3rem; color: var(--ink);
 }
-.project-card p { font-size: 0.88rem; color: var(--muted); flex: 1; }
+.project-card p { font-size: 0.88rem; color: var(--muted); }
 .project-tags {
   list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem;
 }
@@ -266,7 +266,12 @@ h2.light { color: var(--white); }
   color: var(--muted); background: var(--slate);
   padding: 0.2rem 0.6rem; border-radius: 4px;
 }
-.project-footer { margin-top: 0.5rem; }
+.project-footer {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
 
 /* ── CONTACT ── */
 .contact-wrap { text-align: center; }
