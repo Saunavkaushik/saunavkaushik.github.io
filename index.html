@@ -251,9 +251,10 @@
     <span class="status-badge done">Completed</span>
   </div>
   <h3>LEGO Set Clustering Analysis</h3>
-  <p>Clustered 18,600+ Rebrickable LEGO sets by release year and part count using K-Means, revealing that LEGO's growth comes from expanding across product tiers (small to 5,000+ part mega sets) released concurrently, not from sets simply growing bigger over time.</p>
+  <p>Clustered 18,600+ Rebrickable LEGO sets by release year and part count using K-Means, applying a Standard Scaler to normalize the axes and the Elbow method to determine the optimal number of clusters.</p>
   <ul class="project-analysis">
-    <!-- TODO: add 2-3 analysis points -->
+    <li>LEGO's growth comes from expanding across product tiers (small to 5,000+ part mega sets) released concurrently, not from sets simply growing bigger over time.</li>
+    <li>2022 was excluded from the analysis due to incomplete data — extrapolated from a sharp, isolated drop in set count that year relative to the surrounding trend.</li>
   </ul>
   <div class="project-screenshots single" style="grid-template-columns: 1fr;">
     <img src="https://raw.githubusercontent.com/Saunavkaushik/Lego_Analysis/main/title_slide.png" alt="LEGO Dataset Analysis title slide" />
