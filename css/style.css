@@ -261,6 +261,12 @@ h2.light { color: var(--white); }
 .project-tags {
   list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem;
 }
+.project-screenshots.single img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 .project-tags li {
   font-size: 0.72rem; font-weight: 500;
   color: var(--muted); background: var(--slate);
